@@ -56,6 +56,7 @@ fn build_from_source() {
         .file("tlsh-4.8.2/src/shared_file_functions.cpp")
         .file("tlsh_capi.cpp")
         .out_dir(dst.join("lib"))
+        .opt_level(3)
         .compile("libtlsh.a");
 
     println!("cargo:rerun-if-changed=tlsh_capi.cpp");
