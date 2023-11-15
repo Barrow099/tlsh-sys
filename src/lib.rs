@@ -4,7 +4,7 @@ pub type tlsh_t = *mut c_void;
 
 extern "C" {
     pub fn tlsh_new() -> tlsh_t;
-    pub fn tlsh_destroy(tlsh: tlsh_t);
+    pub fn tlsh_delete(tlsh: tlsh_t);
     pub fn tlsh_update(tlsh: tlsh_t, data: *const u8, len: usize);
     pub fn tlsh_final(tlsh: tlsh_t);
     pub fn tlsh_reset(tlsh: tlsh_t);
