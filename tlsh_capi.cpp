@@ -31,11 +31,11 @@ extern "C" {
         return ((Tlsh*)tlsh_instance)->getHash(buffer, buffer_len);
     }
 
-    int totalDiff(void* tlsh_instance, void* tlsh_instance2) {
+    int tlsh_totalDiff(void* tlsh_instance, void* tlsh_instance2) {
         return ((Tlsh*)tlsh_instance)->totalDiff((Tlsh*)tlsh_instance2);
     }
 
-    int fromTlshStr(void* tlsh_instance, const char* tlsh_str) {
+    int tlsh_fromTlshStr(void* tlsh_instance, const char* tlsh_str) {
         return ((Tlsh*)tlsh_instance)->fromTlshStr(tlsh_str);
     }
 
